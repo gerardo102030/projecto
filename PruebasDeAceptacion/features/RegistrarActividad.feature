@@ -18,6 +18,6 @@ Característica: Crear Actividad
 		Cuando doy click en el botón agregar
 		Y ingreso el nombre de actividad "act1" en el campo nombre
 		Y la hora "08:00" en el campo hora
-		Y ponente "ponente00000" en el campo ponente
+		Y ponente "ponente00000" en la caja de texto ponente
 		Y doy click en el boton agregar
 		Entonces Puedo ver el mensaje de error de registro de actividad "El ponente seleccionado no existe"

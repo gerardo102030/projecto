@@ -15,16 +15,16 @@ def step_impl(context):
 
 @when(u'ingreso "{nombre_act}" en el campo nombre')
 def step_impl(context, nombre_act):
-    context.browser.find_element_by_xpath(//*[@id="id_nombre"]).send_keys(nombre_act)
+    context.browser.find_element_by_xpath('//*[@id="id_nombre"]').send_keys(nombre_act)
 
 @when(u'la hora "{hora}" en el campo hora')
 def step_impl(context, hora):
-    context.browser.find_element_by_xpath(//*[@id="id_hora"]).send_keys(hora)
+    context.browser.find_element_by_xpath('//*[@id="id_hora"]').send_keys(hora)
 
 
 @when(u'ponente "{ponente}" en el campo ponente')
 def step_impl(context, ponente):
-    context.browser.find_element_by_xpath(//*[@id="id_encargado"]).send_keys(ponente)
+    context.browser.find_element_by_xpath('//*[@id="id_encargado"]').send_keys(ponente)
     
 
 @when(u'doy click en el boton agregar')
@@ -45,11 +45,10 @@ def step_impl(context):
     raise NotImplementedError(u'STEP: When ingreso el nombre de actividad "act1" en el campo nombre')
 
 
-@when(u'ponente "ponente00000" en el campo ponente')
-def step_impl(context):
-    raise NotImplementedError(u'STEP: When ponente "ponente00000" en el campo ponente')
-
-
+@when(u'ponente "{ponente}}" en el campo ponente')
+def step_impl(context, ponente):
+    context.browser.find_element_by_xpath('//*[@id="id_encargado"]').send_keys(ponente)
+    
 @then(u'Puedo ver el mensaje de error de registro de actividad "El ponente seleccionado no existe"')
 def step_impl(context):
     raise NotImplementedError(u'STEP: Then Puedo ver el mensaje de error de registro de actividad "El ponente seleccionado no existe"')

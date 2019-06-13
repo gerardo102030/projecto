@@ -1,3 +1,6 @@
+from behave import given, when, then
+import time
+
 @given(u'Que presiono "Hist▒rico"')
 def step_impl(context):
     raise NotImplementedError(u'STEP: Given Que presiono "Hist▒rico"')
